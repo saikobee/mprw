@@ -1,0 +1,15 @@
+html body {
+    background: white;
+    color: black;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    color: black;
+    background: gray;
+}
+
+a {
+    font-weight: bold;
+}
