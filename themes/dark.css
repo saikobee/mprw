@@ -1,28 +1,26 @@
 html body {
-    background: #666;
-    color:      #eee;
-}
-
-.banner {
+    background: #444;
     color:      #fff;
-    background: #a36;
-
-    border-bottom-color: #b47;
-}
-
-.banner-border {
-    border-bottom-color: #925;
 }
 
 .button {
-    border-color: #888;
+    border-color: #666;
+}
 
-    background: #777;
+.button_border {
+    border-color: #222;
 }
 
 .button .label {
 }
 
-.button-border {
-    border-color: #444;
+.banner {
+    color:      #fff;
+    background: #484;
+
+    border-bottom-color: #6a6;
+}
+
+.banner_border {
+    border-bottom-color: #151;
 }

@@ -8,17 +8,17 @@ html body {
 .banner {
     font-weight: bold;
 
-    padding: 13px;
+    padding: 16px;
 
     border-bottom-style: solid;
     border-bottom-width: 1px;
 
-    text-align: center;
+    text-align: left;
 
-    font-size: 100%;
+    font-size: 125%;
 }
 
-.banner-border {
+.banner_border {
     border-bottom-style: solid;
     border-bottom-width: 1px;
 }
@@ -30,40 +30,28 @@ h3 {
     padding: 0px;
 }
 
-.padding {
-    margin: 9px;
-}
-
-.column {
-    width: 100%;
-}
-
-.separator {
-    padding-bottom: 9px;
-}
-
 .button {
     height: 48px;
     border-style: solid;
-    border-width: 1px;
+    border-width:        0px;
+    border-top-width:    0px;
+    border-bottom-width: 1px;
     padding: 16px;
 
-    font-weight: bold;
-    text-transform: uppercase;
+    font-weight: normal;
     font-size: 100%;
-    text-align: center;
-
-    border-radius: 4px;
+    text-align: left;
 
     vertical-align: middle;
 }
 
-.button .label {
+.button_border {
+    border-top-width: 0px;
+    border-top-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
 }
 
-.button-border {
-    border-style: solid;
-    border-width: 1px;
-    padding: 0px;
-    border-radius: 4px;
+.button .label {
+    padding-left: 16px;
 }
