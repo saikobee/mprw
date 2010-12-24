@@ -1,15 +1,73 @@
 html body {
-    background: white;
-    color: black;
-    margin: 0px;
+    background: #ccc;
+    color: #000;
+
+    margin:  0px;
+    padding: 0px;
+
+    font-family: sans-serif;
+}
+
+.banner {
+    color: #fff;
+    background: #44e;
+
+    font-weight: bold;
+
+    padding: 13px;
+
+    border-bottom: 1px solid #66f;
+
+    text-align: center;
+
+    font-size: 100%;
+}
+
+.banner-border {
+    border-bottom: 1px solid #22c;
+}
+
+h1,
+h2,
+h3 {
+    margin:  0px;
     padding: 0px;
 }
 
-p {
-    color: black;
-    background: gray;
+.padding {
+    margin: 9px;
 }
 
-a {
+.column {
+    width: 100%;
+}
+
+.separator {
+    padding-bottom: 9px;
+}
+
+.button {
+    height: 48px;
+    border: 1px solid #fff;
+    padding: 16px;
+
+    background: #eee;
+
     font-weight: bold;
+    text-transform: uppercase;
+    font-size: 100%;
+    text-align: center;
+
+    border-radius: 4px;
+
+    vertical-align: middle;
+}
+
+.button .label {
+}
+
+.border {
+    border:  1px solid #aaa;
+    padding: 0px;
+    border-radius: 4px;
 }
