@@ -1,7 +1,4 @@
 html body {
-    background: #ccc;
-    color: #000;
-
     margin:  0px;
     padding: 0px;
 
@@ -9,14 +6,12 @@ html body {
 }
 
 .banner {
-    color: #fff;
-    background: #44e;
-
     font-weight: bold;
 
     padding: 13px;
 
-    border-bottom: 1px solid #66f;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 
     text-align: center;
 
@@ -24,7 +19,8 @@ html body {
 }
 
 .banner-border {
-    border-bottom: 1px solid #22c;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
 }
 
 h1,
@@ -48,10 +44,9 @@ h3 {
 
 .button {
     height: 48px;
-    border: 1px solid #fff;
+    border-style: solid;
+    border-width: 1px;
     padding: 16px;
-
-    background: #eee;
 
     font-weight: bold;
     text-transform: uppercase;
@@ -66,8 +61,9 @@ h3 {
 .button .label {
 }
 
-.border {
-    border:  1px solid #aaa;
+.button-border {
+    border-style: solid;
+    border-width: 1px;
     padding: 0px;
     border-radius: 4px;
 }

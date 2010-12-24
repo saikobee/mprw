@@ -1,0 +1,28 @@
+html body {
+    background: #666;
+    color:      #eee;
+}
+
+.banner {
+    color:      #fff;
+    background: #a36;
+
+    border-bottom-color: #b47;
+}
+
+.banner-border {
+    border-bottom-color: #925;
+}
+
+.button {
+    border-color: #888;
+
+    background: #777;
+}
+
+.button .label {
+}
+
+.button-border {
+    border-color: #444;
+}
