@@ -24,12 +24,6 @@ class InitServlets
 
             @server.mount_proc dir, fun
         end
-
-        @server.mount_proc "/", method(:root)
-    end
-
-    def root req, resp
-        resp.body = "Main Page"
     end
 
     def prev req, resp

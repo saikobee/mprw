@@ -15,7 +15,7 @@ servlets.load
 
 %w[INT TERM].each do |signal|
     trap signal do
-        server.stop
+        server.shutdown
     end
 end
 
