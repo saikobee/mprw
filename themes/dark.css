@@ -4,23 +4,33 @@ html body {
 }
 
 .button {
-    border-color: #666;
+    border-color:       #555;
+    border-top-color:   #666;
+    background:         #555;
 }
 
 .button_border {
-    border-color: #222;
+    border-color:           #222;
+    border-bottom-color:    #111;
+    border-top-color:       #333;
 }
 
 .button .label {
+}
+
+.button .description {
+    color: #bbb;
 }
 
 .banner {
     color:      #fff;
     background: #484;
 
-    border-bottom-color: #6a6;
+    border-color:        #4f8f4f;
+    border-bottom-color: #66aa66;
 }
 
 .banner_border {
-    border-bottom-color: #151;
+    border-bottom-color: #002000;
+    border-color:        #0f2f0f;
 }
