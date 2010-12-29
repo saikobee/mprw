@@ -5,6 +5,8 @@ html body {
     font-family: sans-serif;
 }
 
+/*** BANNER ***/
+
 .banner {
     font-weight: bold;
 
@@ -17,20 +19,18 @@ html body {
 }
 
 .banner_border {
-
-    margin-left:   8px;
-    margin-right:  8px;
+    margin-left:   0px;
+    margin-right:  0px;
 }
 
 .banner,
 .banner_border {
-    border-bottom-left-radius:   0px;
-    border-bottom-right-radius:  0px;
-
     border-style: solid;
     border-width: 1px;
 
-    border-top-width: 0px;
+    border-top-width:   0px;
+    border-left-width:  0px;
+    border-right-width: 0px;
 }
 
 h1,
@@ -39,6 +39,8 @@ h3 {
     margin:  0px;
     padding: 0px;
 }
+
+/*** BUTTON ***/
 
 .button {
     border-style: solid;
@@ -90,6 +92,9 @@ br {
     text-align: left;
 }
 
+.label {
+}
+
 .description {
     font-size: 75%;
     padding-bottom: 8px;
@@ -100,22 +105,27 @@ br {
     border-top-width: 0px;
 }
 
+
+/*** ROUNDING ***/
+
 .solo,
 .solo .button,
 .top,
 .top .button {
-    border-top-right-radius: 8px;
+    border-top-left-radius:   0px;
+    border-top-right-radius: 24px;
 }
 
 .solo,
 .solo .button,
 .bottom,
 .bottom .button {
-    border-bottom-left-radius: 8px;
+    border-bottom-left-radius:  24px;
+    border-bottom-right-radius:  0px;
 }
 
-.solo,
-.solo .button {
-    border-top-right-radius: 8px;
-    border-bottom-left-radius: 8px;
+.banner,
+.banner_border {
+    border-bottom-left-radius:   0px;
+    border-bottom-right-radius:  0px;
 }

@@ -1,32 +1,37 @@
 html body {
-    background: #444;
-    color:      #fff;
+    background: rgb( 60,  60,  60);
+    color:      rgb(255, 255, 255);
 }
 
 .button {
-    border-color:       #555;
-    border-top-color:   #666;
-    background:         #555;
+    border-color:     rgb(82, 82, 82);
+    border-top-color: rgb(88, 88, 88);
+    background:       rgb(80, 80, 80);
 }
 
 .button_border {
-    border-color:           #222;
-    border-bottom-color:    #111;
-    border-top-color:       #333;
+    border-color:        rgb(40, 40, 40);
+    border-bottom-color: rgb(30, 30, 30);
+    border-top-color:    rgb(50, 50, 50);
+}
+
+.button_border.top,
+.button_border.middle {
+    border-bottom-color: rgb(60, 60, 60);
 }
 
 .button .label {
 }
 
 .button .description {
-    color: #bbb;
+    color: rgb(175, 175, 175);
 }
 
 .banner {
     color:      #fff;
     background: #484;
 
-    border-color:        #4f8f4f;
+    border-top-color:    #4f8f4f;
     border-bottom-color: #66aa66;
 }
 
