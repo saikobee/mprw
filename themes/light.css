@@ -1,5 +1,5 @@
 html body {
-    background: rgb(185, 185, 185);
+    background: rgb(225, 225, 225);
     color:      rgb(  0,   0,   0);
 }
 
@@ -10,14 +10,14 @@ html body {
 }
 
 .button_border {
-    border-bottom-color: rgb(135, 135, 135);
-    border-color:        rgb(145, 145, 145);
-    border-top-color:    rgb(155, 155, 155);
+    border-bottom-color: rgb(165, 165, 165);
+    border-color:        rgb(175, 175, 175);
+    border-top-color:    rgb(185, 185, 185);
 }
 
 .button_border.top,
 .button_border.middle {
-    border-bottom-color: rgb(185, 185, 185);
+    border-bottom-color: rgb(215, 215, 215);
 }
 
 .button .label {
