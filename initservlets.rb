@@ -1,6 +1,7 @@
 class InitServlets
-    def initialize server
+    def initialize server, mpd
         @server = server
+        @mpd    = mpd
 
         # Maps "directories" on the server to methods in this class
         @mapping = {
@@ -27,40 +28,39 @@ class InitServlets
     end
 
     def prev req, resp
+        @mpd.previous
         resp.body = "Previous"
     end
 
     def next req, resp
+        @mpd.next
         resp.body = "Next"
     end
 
     def stop req, resp
+        @mpd.stop
         resp.body = "Stop"
     end
 
     def pause req, resp
+        @mpd.pause = true
         resp.body = "Pause"
     end
 
     def play req, resp
+        @mpd.play
         resp.body = "Play"
     end
 
     def toggle req, resp
-        resp.body = "Toggle"
+        @mpd.pause = ! @mpd.paused?
+        resp.body  = "Toggle"
     end
 
     def debug req, resp
-        resp.content_type = "text/html"
-        resp.body = <<EOF
-<code>
-[[[
-<pre>
-Just a simple test right now :D
-Boy, I sure do love Ruby!
-</pre>
-]]]
-</code>
-EOF
+        stats = @mpd.stats
+        stats.each do |k, v|
+            resp.body << "#{k}: #{v}" << "\n"
+        end
     end
 end

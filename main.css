@@ -47,11 +47,25 @@ h3 {
     border-top-width:     1px;
     border-left-width:    1px;
 
-    padding: 0px;
+    padding:        0px;
+    padding-top:    4px;
+    padding-bottom: 4px
 
     font-weight: normal;
     font-size: 100%;
     text-align: left;
+
+    margin: 0px;
+}
+
+.button p {
+    margin: 8px;
+    vertical-align: middle;
+    text-align:     center;
+}
+
+br {
+    clear: both;
 }
 
 .button_border {
@@ -61,10 +75,10 @@ h3 {
     border-top-width:  1px;
     border-left-width: 1px;
 
-    margin-top:     8px;
+    margin-top:     0px;
     margin-left:   24px;
     margin-right:  24px;
-    margin-bottom:  8px;
+    margin-bottom:  0px;
 }
 
 .button,
@@ -72,12 +86,36 @@ h3 {
     border-radius: 0px;
 }
 
-.button * {
-    padding-left: 16px;
-    vertical-align: middle;
+.button p {
+    text-align: left;
 }
 
 .description {
-    margin-top: -8px;
     font-size: 75%;
+    padding-bottom: 8px;
+}
+
+.middle,
+.bottom {
+    border-top-width: 0px;
+}
+
+.solo,
+.solo .button,
+.top,
+.top .button {
+    border-top-right-radius: 8px;
+}
+
+.solo,
+.solo .button,
+.bottom,
+.bottom .button {
+    border-bottom-left-radius: 8px;
+}
+
+.solo,
+.solo .button {
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
