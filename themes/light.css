@@ -1,0 +1,41 @@
+html body {
+    background: rgb(185, 185, 185);
+    color:      rgb(  0,   0,   0);
+}
+
+.button {
+    border-color:     rgb(250, 250, 250);
+    border-top-color: rgb(255, 255, 255);
+    background:       rgb(245, 245, 245);
+}
+
+.button_border {
+    border-bottom-color: rgb(135, 135, 135);
+    border-color:        rgb(145, 145, 145);
+    border-top-color:    rgb(155, 155, 155);
+}
+
+.button_border.top,
+.button_border.middle {
+    border-bottom-color: rgb(185, 185, 185);
+}
+
+.button .label {
+}
+
+.button .description {
+    color: rgb(100, 100, 100);
+}
+
+.banner {
+    color:      rgb(255, 255, 255);
+    background: #7a5c99;
+
+    border-bottom-color: #8659b2;
+    border-top-color:    rgb(48, 48, 48);
+}
+
+.banner_border {
+    border-bottom-color: rgb(48, 48, 48);
+    border-color:        rgb(48, 48, 48);
+}

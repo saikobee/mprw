@@ -32,10 +32,10 @@ html body {
     background: #5d3366;
 
     border-bottom-color: #683473;
-    border-top-color:    rgb( 58,  35,  64);
+    border-top-color:    rgb(48, 48, 48);
 }
 
 .banner_border {
-    border-bottom-color: rgb( 58,  35,  64);
-    border-color:        rgb( 58,  35,  64);
+    border-bottom-color: rgb(48, 48, 48);
+    border-color:        rgb(48, 48, 48);
 }
