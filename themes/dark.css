@@ -28,14 +28,14 @@ html body {
 }
 
 .banner {
-    color:      #fff;
-    background: #484;
+    color:      rgb(255, 255, 255);
+    background: #5d3366;
 
-    border-top-color:    #4f8f4f;
-    border-bottom-color: #66aa66;
+    border-bottom-color: #683473;
+    border-top-color:    rgb( 58,  35,  64);
 }
 
 .banner_border {
-    border-bottom-color: #002000;
-    border-color:        #0f2f0f;
+    border-bottom-color: rgb( 58,  35,  64);
+    border-color:        rgb( 58,  35,  64);
 }

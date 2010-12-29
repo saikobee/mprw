@@ -10,7 +10,9 @@ html body {
 .banner {
     font-weight: bold;
 
-    padding: 16px;
+    padding:        16px;
+    padding-top:     6px;
+    padding-bottom:  6px;
 
     text-align: left;
     text-align: center;
