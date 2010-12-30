@@ -90,7 +90,7 @@ class InitServlets
     def debug req, resp
         stats = @mpd.stats
         stats.each do |k, v|
-            resp.body << "#{k}: #{v}" << "\n"
+            resp.body << "#{k}: #{v}" << EOL
         end
     end
 end
