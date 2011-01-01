@@ -1,13 +1,94 @@
 #!/usr/bin/ruby
 
+require "ostruct"
 require "cgi"
+
+require "./buttons.rb"
 
 $cgi = cgi = CGI.new("html4")
 
-cgi.out do
-    cgi.html do
-        cgi.p do
-            "Hello world"
+def css sheet, cgi=$cgi
+    cgi.link(
+        :rel  => "stylesheet",
+        :type => "text/css",
+        :href => sheet
+    )
+end
+
+def script src, cgi=$cgi
+    cgi.script(
+        :type => "text/javascript",
+        :src  => src
+    )
+end
+
+def utf8 cgi=$cgi
+    cgi.meta(
+        :'http-equiv' => "Content-Type",
+        :content      => "text/html; charset=UTF-8"
+    )
+end
+
+def meta name, content, cgi=$cgi
+    cgi.meta(
+        :name    => name,
+        :content => content
+    )
+end
+
+def android_fix cgi=$cgi
+    meta "HandheldFriendly", "true", cgi
+end
+
+def header cgi=$cgi
+    cgi.div :class => "banner_border" do
+        cgi.h1 :class => "banner" do
+            "mprw &ndash; mpd web remote"
         end
     end
+end
+
+def page cgi=$cgi
+    cgi.out do
+        cgi.head do
+            cgi.title{"mprw - mpd web remote"} +
+            css("main.css") +
+            css("themes/dark.css") +
+            script("main.js") +
+            android_fix +
+            utf8
+        end +
+        cgi.html do
+            "\n" + yield
+        end
+    end
+end
+
+items = [
+    Buttons::SEP,
+
+    Buttons::PLAY_PAUSE,
+
+    Buttons::SEP,
+
+    Buttons::VOL_UP,
+    Buttons::VOL_DOWN,
+
+    Buttons::SEP,
+
+    Buttons::NEXT,
+    Buttons::PREV,
+
+    Buttons::SEP,
+
+    Buttons::RANDOM,
+    Buttons::REPEAT,
+    Buttons::CLEAR,
+
+    Buttons::SEP,
+]
+
+page do
+    header +
+    items.map(&:to_html).join("\n")
 end

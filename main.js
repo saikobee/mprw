@@ -43,5 +43,7 @@ function add_button_after(el) {
         return border;
     }
 
-    insertAfter(el, make_button("Hello", "Click to delete me"));
+    var button = make_button("Hello", "Click to delete me");
+
+    insertAfter(el, button);
 }
