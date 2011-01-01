@@ -48,18 +48,24 @@ def header cgi=$cgi
     end
 end
 
+def head cgi=$cgi
+    cgi.head do
+        cgi.title{"mprw - mpd web remote"} +
+        css("main.css") +
+        css("themes/dark.css") +
+        script("main.js") +
+        android_fix +
+        utf8
+    end
+end
+
 def page cgi=$cgi
     cgi.out do
-        cgi.head do
-            cgi.title{"mprw - mpd web remote"} +
-            css("main.css") +
-            css("themes/dark.css") +
-            script("main.js") +
-            android_fix +
-            utf8
-        end +
         cgi.html do
-            "\n" + yield
+            head +
+            cgi.body do
+                "\n" + yield
+            end
         end
     end
 end
