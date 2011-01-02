@@ -1,6 +1,5 @@
 #!/usr/bin/ruby
 
-require "ostruct"
 require "cgi"
 
 require "./buttons.rb"
@@ -73,28 +72,37 @@ end
 items = [
     Buttons::SEP,
 
-    Buttons::PLAY_PAUSE,
+    ButtonGroup[
+        Buttons::PLAY_PAUSE,
+    ],
 
     Buttons::SEP,
 
-    Buttons::VOL_UP,
-    Buttons::VOL_DOWN,
+    ButtonGroup[
+        Buttons::VOL_UP,
+        Buttons::VOL_DOWN,
+    ],
 
     Buttons::SEP,
 
-    Buttons::NEXT,
-    Buttons::PREV,
+    ButtonGroup[
+        Buttons::NEXT,
+        Buttons::PREV,
+    ],
 
     Buttons::SEP,
 
-    Buttons::RANDOM,
-    Buttons::REPEAT,
-    Buttons::CLEAR,
+    ButtonGroup[
+        Buttons::RANDOM,
+        Buttons::REPEAT,
+        Buttons::CLEAR,
+    ],
 
     Buttons::SEP,
-]
+].map{|item|
+    item.to_html
+}.join
 
 page do
-    header +
-    items.map(&:to_html).join("\n")
+    header + items
 end

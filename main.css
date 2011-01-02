@@ -68,10 +68,6 @@ h3 {
     text-align:     center;
 }
 
-br {
-    clear: both;
-}
-
 .button_border {
     border-style: solid;
 
@@ -85,6 +81,11 @@ br {
     margin-bottom:  0px;
 
     cursor: pointer;
+}
+
+.separator {
+    margin-top:    16px;
+    margin-bottom: 16px;
 }
 
 .button,
