@@ -51,8 +51,8 @@ class InitServlets
     end
 
     def pause req, resp
-        @mpd.pause = true
-        resp.body = "Pause"
+        @mpd.pause =  true
+        resp.body  = "Pause"
     end
 
     def play req, resp
@@ -61,7 +61,7 @@ class InitServlets
     end
 
     def play_pause req, resp
-        @mpd.pause = !  @mpd.paused?
+        @mpd.pause =  ! @mpd.paused?
         resp.body  = if @mpd.paused?
             then "Pause"
             else "Play"
