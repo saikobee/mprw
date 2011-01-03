@@ -63,7 +63,7 @@ def page cgi=$cgi
         cgi.html do
             head +
             cgi.body do
-                "\n" + yield
+                yield
             end
         end
     end
