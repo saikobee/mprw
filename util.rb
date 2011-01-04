@@ -32,7 +32,7 @@ Util.instance_eval do
     end
 
     def android_fix cgi=$cgi
-        meta "HandheldFriendly", "true", cgi
+        meta "HandheldFriendly", "true"
     end
 
     def title text, cgi=$cgi
