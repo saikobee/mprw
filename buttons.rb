@@ -54,7 +54,7 @@ class ButtonGroup
     end
 end
 
-module Buttons
+class Buttons
     PLAY_PAUSE = Button.new(
         :name  => "Play/Pause",
         :desc  => "Toggles playback",

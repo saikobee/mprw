@@ -3,58 +3,19 @@
 require "cgi"
 
 require "./buttons.rb"
+require "./util.rb"
 
 $cgi = cgi = CGI.new("html4")
 
-def css sheet, cgi=$cgi
-    cgi.link(
-        :rel  => "stylesheet",
-        :type => "text/css",
-        :href => sheet
-    )
-end
-
-def script src, cgi=$cgi
-    cgi.script(
-        :type => "text/javascript",
-        :src  => src
-    )
-end
-
-def utf8 cgi=$cgi
-    cgi.meta(
-        :'http-equiv' => "Content-Type",
-        :content      => "text/html; charset=UTF-8"
-    )
-end
-
-def meta name, content, cgi=$cgi
-    cgi.meta(
-        :name    => name,
-        :content => content
-    )
-end
-
-def android_fix cgi=$cgi
-    meta "HandheldFriendly", "true", cgi
-end
-
-def header cgi=$cgi
-    cgi.div :class => "banner_border" do
-        cgi.h1 :class => "banner" do
-            "mprw &ndash; mpd web remote"
-        end
-    end
-end
-
 def head cgi=$cgi
+    u = Util
     cgi.head do
-        cgi.title{"mprw - mpd web remote"} +
-        css("main.css") +
-        css("themes/dark.css") +
-        script("main.js") +
-        android_fix +
-        utf8
+        u.title("mprw - mpd web remote") +
+        u.css("main.css") +
+        u.css("themes/dark.css") +
+        u.script("main.js") +
+        u.android_fix +
+        u.utf8
     end
 end
 
@@ -69,36 +30,45 @@ def page cgi=$cgi
     end
 end
 
+def header cgi=$cgi
+    cgi.div :class => "banner_border" do
+        cgi.h1 :class => "banner" do
+            "mprw &ndash; mpd web remote"
+        end
+    end
+end
+
+b = Buttons
 items = [
-    Buttons::SEP,
+    b::SEP,
 
     ButtonGroup[
-        Buttons::PLAY_PAUSE,
+        b::PLAY_PAUSE,
     ],
 
-    Buttons::SEP,
+    b::SEP,
 
     ButtonGroup[
-        Buttons::VOL_UP,
-        Buttons::VOL_DOWN,
+        b::VOL_UP,
+        b::VOL_DOWN,
     ],
 
-    Buttons::SEP,
+    b::SEP,
 
     ButtonGroup[
-        Buttons::NEXT,
-        Buttons::PREV,
+        b::NEXT,
+        b::PREV,
     ],
 
-    Buttons::SEP,
+    b::SEP,
 
     ButtonGroup[
-        Buttons::RANDOM,
-        Buttons::REPEAT,
-        Buttons::CLEAR,
+        b::RANDOM,
+        b::REPEAT,
+        b::CLEAR,
     ],
 
-    Buttons::SEP,
+    b::SEP,
 ].map{|item|
     item.to_html
 }.join
