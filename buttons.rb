@@ -24,6 +24,10 @@ class Button < OpenStruct
         @table.merge! data
         self
     end
+
+    def make klass
+        with(:klass => klass).to_html
+    end
 end
 
 class ButtonGroup
@@ -36,20 +40,19 @@ class ButtonGroup
     end
 
     def to_html cgi=$cgi
-        len = @buttons.length
-        return "" if len == 0
-
-        top = @buttons.first.with(:klass => "solo").to_html
-        return top if len == 1
-
-        top = @buttons.first.with(:klass => "top"   ).to_html
-        bot = @buttons.last .with(:klass => "bottom").to_html
-        return top + bot if len == 2
-
-        mid = @buttons[1 .. -2].map{|button|
-            button.with(:klass => "middle").to_html
-        }.join
-        return top + mid + bot
+        return case @buttons.length
+        when 0
+            ""
+        when 1
+            @buttons.first.make("solo")
+        when 2
+            @buttons.first.make("top") +
+            @buttons.last .make("bottom")
+        else
+            @buttons.first.make("top") +
+            @buttons[1 .. -2].map{|button| button.make("middle")}.join +
+            @buttons.last.make("bottom")
+        end
     end
 end
 
