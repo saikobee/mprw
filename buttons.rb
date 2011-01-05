@@ -17,13 +17,12 @@ class Button < OpenStruct
     end
 
     def with data
-        ret = dup
-        ret.with! data
-        ret
+        dup.with! data
     end
 
     def with! data
         @table.merge! data
+        self
     end
 end
 
