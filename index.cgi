@@ -13,6 +13,7 @@ def head cgi=$cgi
         u.title("mprw - mpd web remote") +
         u.css("main.css") +
         u.css("themes/dark.css") +
+        u.script("jquery.js") +
         u.script("main.js") +
         u.android_fix +
         u.utf8
