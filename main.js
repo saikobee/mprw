@@ -1,11 +1,3 @@
-function set_on_click() {
-    var play_pause = document.getElementById("play_pause");
-
-    play_pause.onclick = function() {
-        alert("Just a test");
-    }
-}
-
 function insertAfter(referenceNode, newNode) {
     //referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
