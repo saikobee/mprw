@@ -1,5 +1,5 @@
 class InitServlets
-    EOL = "\r\n"
+    EOL = "\n"
 
     def initialize server, mpd
         @server = server
@@ -28,7 +28,7 @@ class InitServlets
 
     def load
         @mapping.each do |k, v|
-            dir = @prefix + "/" + k
+            dir = File.join(@prefix, k)
             fun = method v
 
             @server.mount_proc dir, fun
