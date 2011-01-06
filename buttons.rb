@@ -7,8 +7,14 @@ class Separator
 end
 
 class Button < OpenStruct
+    ON_CLICK = "on_button_click(this)"
+
     def to_html cgi=$cgi
-        cgi.div :class => "button_border #{klass}" do
+        cgi.div(
+            :class   => "button_border #{klass}",
+            :id      => id,
+            :onclick => ON_CLICK
+        ) do
             cgi.div :class => "button" do
                 cgi.p(:class => "label"      ){name} +
                 cgi.p(:class => "description"){desc}
