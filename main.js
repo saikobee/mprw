@@ -40,8 +40,10 @@ function add_button_after(el) {
     insertAfter(el, button);
 }
 
-function nop() {}
+function nop() {
+}
 
 function on_button_click(el) {
-    $.get("/message/" + el.id, nop);
+    var msg = "/message/" + el.id;
+    $.get(msg, nop);
 }
