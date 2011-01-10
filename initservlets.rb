@@ -20,6 +20,9 @@ class InitServlets
             "volup"         => :vol_up,
             "voldown"       => :vol_down,
             "nowplaying"    => :now_playing,
+            "random"        => :random,
+            "repeat"        => :repeat,
+            "clear"         => :clear,
         }
 
         # Prefix to the "directories" above
@@ -71,12 +74,12 @@ class InitServlets
 
     def vol_up req, resp
         @mpd.volume += @d_volume
-        resp.body = "Volume #{@mpd.volume}"
+        resp.body    = "Volume #{@mpd.volume}"
     end
 
     def vol_down req, resp
         @mpd.volume -= @d_volume
-        resp.body = "Volume #{@mpd.volume}"
+        resp.body    = "Volume #{@mpd.volume}"
     end
 
     def now_playing req, resp
@@ -86,6 +89,21 @@ class InitServlets
         stats.each do |stat|
             resp.body << stat << " " << song.send(stat) << EOL
         end
+    end
+
+    def random req, resp
+        @mpd.random = ! @mpd.random?
+        resp.body   = "Random"
+    end
+
+    def repeat req, resp
+        @mpd.repeat = ! @mpd.repeat?
+        resp.body   = "Repeat"
+    end
+
+    def clear req, resp
+        @mpd.clear
+        resp.body = "Clear"
     end
 
     def debug req, resp
