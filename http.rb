@@ -1,17 +1,31 @@
 #!/usr/bin/ruby
 
+require "ostruct"
 require "librmpd"
 require "webrick"
 include  WEBrick
 
 require "./initservlets"
 
-server = HTTPServer.new(
-    :Port           => 1234,
-    :DocumentRoot   => Dir.pwd
+class MprwConf < OpenStruct
+end
+
+conf = MprwConf.new(
+    :web_port => 1234,
+    :web_root => Dir.pwd,
+    :mpd_host => "localhost",
+    :mpd_port => 6600
 )
 
-mpd = MPD.new "localhost", 6600
+server = HTTPServer.new(
+    :Port           => conf.web_port,
+    :DocumentRoot   => conf.web_root
+)
+
+mpd = MPD.new(
+    conf.mpd_host,
+    conf.mpd_port
+)
 
 # Enables callbacks
 mpd.connect true
