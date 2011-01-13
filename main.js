@@ -44,6 +44,6 @@ function nop() {
 }
 
 function on_button_click(el) {
-    var msg = "/message/" + el.id;
+    var msg = "/api/" + el.id;
     $.get(msg, nop);
 }

@@ -32,12 +32,12 @@ class InitServlets
         }
 
         # Prefix to the "directories" above
-        @prefix = "/message"
+        @prefix = "/api"
     end
 
     def load
         @mapping.each do |k, v|
-            dir = File.join @prefix, k
+            dir = @prefix + "/" + k
             fun = method v
 
             @server.mount_proc dir, fun
