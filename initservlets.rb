@@ -12,7 +12,7 @@ class InitServlets
         @mpd    = mpd
 
         # Percentage by which to increment volume
-        @d_volume = 10
+        @d_volume = 5
 
         # Maps "directories" on the server to methods in this class
         @mapping = {
@@ -37,7 +37,7 @@ class InitServlets
 
     def load
         @mapping.each do |k, v|
-            dir = File.join(@prefix, k)
+            dir = File.join @prefix, k
             fun = method v
 
             @server.mount_proc dir, fun
