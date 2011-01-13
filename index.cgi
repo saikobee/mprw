@@ -74,6 +74,19 @@ items = [
     item.to_html
 }.join
 
+def dialog cgi=$cgi
+    cgi.div :id => "overlay" do
+        cgi.div :id => "dialog" do
+            cgi.p(:id => "title" ){"This is AMAZING"} +
+            cgi.p(:id => "album" ){"I feel incredible"} +
+            cgi.p(:id => "artist"){"Whoosh"} +
+            cgi.p(:id => "length"){"5:24"}
+        end
+    end
+end
+
 page do
-    header + items
+    header +
+    items  +
+    dialog
 end
