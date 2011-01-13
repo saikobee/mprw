@@ -1,3 +1,5 @@
+require "json"
+
 class Range
     def clamp x
         [[x, self.begin].max, self.end].min
@@ -97,9 +99,14 @@ class InitServlets
         song = @mpd.current_song
 
         stats = %w[title album artist time]
-        stats.each do |stat|
-            resp.body << stat << " " << song.send(stat) << EOL
+
+        mapping = stats.map do |stat|
+            [stat, song.send(stat)]
         end
+
+        hash = Hash[*mapping.flatten]
+
+        resp.body << hash.to_json
     end
 
     def random req, resp
