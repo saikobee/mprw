@@ -1,3 +1,9 @@
+class Range
+    def clamp x
+        [[x, self.begin].max, self.end].min
+    end
+end
+
 class InitServlets
     EOL = "\n"
 
@@ -6,7 +12,7 @@ class InitServlets
         @mpd    = mpd
 
         # Percentage by which to increment volume
-        @d_volume = 5
+        @d_volume = 10
 
         # Maps "directories" on the server to methods in this class
         @mapping = {
@@ -73,13 +79,18 @@ class InitServlets
     end
 
     def vol_up req, resp
-        @mpd.volume += @d_volume
-        resp.body    = "Volume #{@mpd.volume}"
+        vol_mod req, resp, +@d_volume
     end
 
     def vol_down req, resp
-        @mpd.volume -= @d_volume
-        resp.body    = "Volume #{@mpd.volume}"
+        vol_mod req, resp, -@d_volume
+    end
+
+    def vol_mod req, resp, d_vol
+        old_vol     = @mpd.volume
+        new_vol     = old_vol + d_vol
+        @mpd.volume = (0 .. 100).clamp(new_vol) # monkey patched
+        resp.body   = "Volume #{@mpd.volume}"
     end
 
     def now_playing req, resp
