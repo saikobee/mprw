@@ -4,14 +4,14 @@ html body {
 }
 
 .button {
+    background:       rgb(80, 80, 80);
     border-color:     rgb(82, 82, 82);
     border-top-color: rgb(88, 88, 88);
-    background:       rgb(80, 80, 80);
 }
 
 .button_border {
-    border-color:        rgb(40, 40, 40);
-    border-bottom-color: rgb(30, 30, 30);
+    border-bottom-color: rgb(35, 35, 35);
+    border-color:        rgb(45, 45, 45);
     border-top-color:    rgb(50, 50, 50);
 }
 
