@@ -12,7 +12,7 @@ def head cgi=$cgi
     cgi.head do
         u.title("mprw - mpd web remote") +
         u.css("main.css") +
-        u.css("themes/dark.css") +
+        u.css("themes/dark/main.css") +
         u.script("jquery.js") +
         u.script("main.js") +
         u.android_fix +
@@ -36,6 +36,12 @@ def header cgi=$cgi
         cgi.h1 :class => "banner" do
             "mprw &ndash; mpd web remote"
         end
+    end
+end
+
+def footer cgi=$cgi
+    cgi.p :class => "footer" do
+        "mprw Copyright &copy; 2011 Brian Mock"
     end
 end
 
@@ -86,7 +92,8 @@ def dialog cgi=$cgi
 end
 
 page do
-    header +
+    #header +
     items  +
-    dialog
+    dialog +
+    footer
 end

@@ -39,3 +39,17 @@ html body {
     border-bottom-color: rgb(48, 48, 48);
     border-color:        rgb(48, 48, 48);
 }
+
+#overlay {
+    background: url(overlay.png);
+    color:      white;
+
+    z-index: 1000;
+}
+
+#dialog {
+    background: white;
+    color:      black;
+
+    border-color: gray;
+}
