@@ -65,7 +65,6 @@ h3 {
 .button p {
     margin: 8px;
     vertical-align: middle;
-    text-align:     center;
 }
 
 .button_border {
@@ -152,8 +151,6 @@ h3 {
 }
 
 #dialog {
-    opacity: 1.00;
-
     margin: auto;
 
     width: 33%;
@@ -166,4 +163,29 @@ h3 {
     border-width: 3px;
 
     border-radius: 256px;
+}
+
+/*** FOOTER STYLE ***/
+#footer {
+    text-align:  center;
+}
+
+#footer_border {
+    margin-left:  48px;
+    margin-right: 48px;
+}
+
+#footer,
+#footer_border {
+    border-width: 1px;
+    border-style: solid;
+
+    border-bottom-left-radius:  24px;
+    border-bottom-right-radius:  0px;
+    border-top-left-radius:      0px;
+    border-top-right-radius:    24px;
+}
+
+#footer .description {
+    padding-bottom: 2px;
 }

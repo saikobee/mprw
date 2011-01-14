@@ -40,9 +40,16 @@ def header cgi=$cgi
 end
 
 def footer cgi=$cgi
-    cgi.p :class => "footer" do
-        "mprw Copyright &copy; 2011 Brian Mock"
-    end
+    cgi.div(:id => "footer_border") {
+        cgi.div(:id => "footer") {
+            cgi.p(:class => "label") {
+                "mprw &ndash; mpd web remote"
+            } +
+            cgi.p(:class => "description") {
+                "Copyright &copy; 2011 Brian Mock"
+            }
+        }
+    } + Buttons::SEP.to_html
 end
 
 b = Buttons
