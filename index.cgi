@@ -90,8 +90,8 @@ items = [
 def dialog cgi=$cgi
     cgi.div :id => "overlay" do
         cgi.div :id => "dialog" do
-            cgi.p(:id => "title" ){"This is AMAZING"} +
-            cgi.p(:id => "album" ){"I feel incredible"} +
+            cgi.p(:id => "title" ){"This is Amazing"} +
+            cgi.p(:id => "album" ){"I Feel Incredible"} +
             cgi.p(:id => "artist"){"Whoosh"} +
             cgi.p(:id => "length"){"5:24"}
         end

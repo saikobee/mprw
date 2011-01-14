@@ -116,16 +116,16 @@ h3 {
 .solo .button,
 .top,
 .top .button {
-    border-top-left-radius:   0px;
-    border-top-right-radius: 24px;
+    border-top-left-radius:   2px;
+    border-top-right-radius:  2px;
 }
 
 .solo,
 .solo .button,
 .bottom,
 .bottom .button {
-    border-bottom-left-radius:  24px;
-    border-bottom-right-radius:  0px;
+    border-bottom-left-radius:   2px;
+    border-bottom-right-radius:  2px;
 }
 
 .banner,
@@ -147,6 +147,7 @@ h3 {
 
     position: absolute;
 
+    visibility: visible;
     visibility: hidden;
 }
 
@@ -162,7 +163,7 @@ h3 {
     border-style: solid;
     border-width: 3px;
 
-    border-radius: 256px;
+    border-radius:   2px;
 }
 
 /*** FOOTER STYLE ***/
@@ -180,10 +181,7 @@ h3 {
     border-width: 1px;
     border-style: solid;
 
-    border-bottom-left-radius:  24px;
-    border-bottom-right-radius:  0px;
-    border-top-left-radius:      0px;
-    border-top-right-radius:    24px;
+    border-radius: 2px
 }
 
 #footer .description {
