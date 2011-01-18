@@ -6,16 +6,12 @@ require "webrick"
 include  WEBrick
 
 require "./initservlets"
+require "./config"
 
 class MprwConf < OpenStruct
 end
 
-conf = MprwConf.new(
-    :web_port => 1234,
-    :web_root => Dir.pwd,
-    :mpd_host => "localhost",
-    :mpd_port => 6600
-)
+conf = MprwConf.load "mprw.conf"
 
 server = HTTPServer.new(
     :Port           => conf.web_port,
