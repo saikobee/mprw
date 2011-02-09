@@ -111,5 +111,11 @@ class Buttons
         :id    => "clear"
     )
 
+    STOP = Button.new(
+        :name  => "Stop",
+        :desc  => "Stops playback",
+        :id    => "stop"
+    )
+
     SEP = Separator.new
 end

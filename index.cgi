@@ -58,6 +58,7 @@ items = [
 
     ButtonGroup[
         b::PLAY_PAUSE,
+        b::STOP,
     ],
 
     b::SEP,
