@@ -1,0 +1,93 @@
+body::-webkit-scrollbar-track {
+    background:   rgb(60, 60, 60) !important;
+    border-color: black !important;
+    border-style: solid !important;
+}
+
+body::-webkit-scrollbar-track:vertical {
+    border-left-width: 0px !important;
+}
+
+body::-webkit-scrollbar-track:horizontal {
+    border-top-width: 0px !important;
+}
+
+body::-webkit-scrollbar-thumb {
+    background:    rgba(255, 255, 255, 0.10) !important;
+    border-color:  rgb(60, 60, 60) !important;
+    border-width:  3px !important;
+    border-radius: 6px !important;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.20) !important;
+}
+
+body::-webkit-scrollbar-thumb:vertical {
+}
+
+body::-webkit-scrollbar-thumb:horizontal {
+}
+
+::-webkit-scrollbar {
+    width:  12px;
+    height: 12px;
+
+    border-width: 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.25);
+}
+
+/*
+::-webkit-scrollbar:vertical {
+    border-left-width: 1px;
+}
+
+::-webkit-scrollbar:horizontal {
+    border-top-width: 1px;
+}
+*/
+
+::-webkit-scrollbar-corner,
+::-webkit-scrollbar-track {
+    margin:       0px;
+    padding:      0px;
+    border-width: 0px;
+}
+
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    border-width: 1px;
+
+    border-style: solid;
+
+    border-color: rgba(255, 255, 255, 1.00);
+    background:   rgba(  0,   0,   0, 0.30);
+}
+
+body::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.40);
+}
+
+body::-webkit-scrollbar-track:vertical,
+body::-webkit-scrollbar-track:horizontal {
+    border-color: #888;
+}
+
+::-webkit-scrollbar-track:horizontal,
+::-webkit-scrollbar-track:vertical {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+}
